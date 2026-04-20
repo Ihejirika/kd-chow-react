@@ -1,0 +1,16 @@
+@import "tailwindcss";
+/* Import Tailwind v4 */
+/* Enable manual "class-based" dark mode. 
+  Without this, Tailwind v4 only listens to system preferences!
+*/
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom animation for our Toast Notification */
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
